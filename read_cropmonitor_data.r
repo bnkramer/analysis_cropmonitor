@@ -3,7 +3,7 @@ df = readRDS("~/cropmonitor/cropmonitor.rds")
 
 # screen for test sites in the US / EU
 df = df[which(df$longitude > 70),]
-df = df[, -which(names(df) %in% "questionaireresults")]
+df = df[, -which(names(df) %in% "questionnaireresult")]
 
 # read questionnaire data and merges with the original
 # data
@@ -15,3 +15,4 @@ if (file.exists("~/cropmonitor/questionaire.xlsx")){
 
 # create unique field vector
 df$userfield = paste(df$uniqueuserid,df$uniquecropsiteid,sep = "-")
+
