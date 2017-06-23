@@ -16,3 +16,6 @@ if (file.exists("~/cropmonitor/questionaire.xlsx")){
 # create unique field vector
 df$userfield = paste(df$uniqueuserid,df$uniquecropsiteid,sep = "-")
 rm(quest)
+
+# rename uniqueuserid hhid
+names(df)[names(df) == 'uniqueuserid'] <- 'hhid'
