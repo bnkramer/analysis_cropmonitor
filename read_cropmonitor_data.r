@@ -15,4 +15,4 @@ if (file.exists("~/cropmonitor/questionaire.xlsx")){
 
 # create unique field vector
 df$userfield = paste(df$uniqueuserid,df$uniquecropsiteid,sep = "-")
-
+rm(quest)
