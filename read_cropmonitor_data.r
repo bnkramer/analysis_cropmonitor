@@ -5,7 +5,7 @@ df = readRDS("~/cropmonitor/cropmonitor.rds")
 df = df[which(df$longitude > 70),]
 df = df[, -which(names(df) %in% "questionaireresults")]
 
-# read questionair data and merges with the original
+# read questionnaire data and merges with the original
 # data
 if (file.exists("~/cropmonitor/questionaire.xlsx")){
   quest = readxl::read_excel("~/cropmonitor/questionaire.xlsx")
